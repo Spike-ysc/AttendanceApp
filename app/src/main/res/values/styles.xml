@@ -12,5 +12,9 @@
         <item name="colorControlNormal">@color/inputBg</item>
         <item name="colorControlActivated">@color/loginButton</item>
     </style>
+    <style name="MyEditText2" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/inputBg</item>
+        <item name="colorControlActivated">@color/registerButton</item>
+    </style>
 
 </resources>

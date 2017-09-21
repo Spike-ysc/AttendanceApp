@@ -10,12 +10,19 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import cn.bmob.sms.BmobSMS;
@@ -27,9 +34,11 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mSendBtn, mPinBtn;
-    private EditText mPhoneEdit, mPinEdit;
+    private EditText mPhoneEdit, mPinEdit, mPhoneText, mPasswordEdit;
     private static final int REQUEST_CODE =  1000;
     private String phoneNum, pinNum;
+    private ImageView mBackImg, mDelectImg, mShowPwdImg;
+    private CheckBox mShowCheckBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +51,46 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         initView();
         mSendBtn.setOnClickListener(this);
         mPinBtn.setOnClickListener(this);
+        mBackImg.setOnClickListener(this);
+
+//        显示和隐藏密码
+        mShowCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    mPasswordEdit.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    mPasswordEdit.setSelection(mPasswordEdit.length());
+                }else {
+                    mPasswordEdit.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    mPasswordEdit.setSelection(mPasswordEdit.length());
+                }
+            }
+        });
+
+
+
+        mPhoneText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() != 0){
+                    mDelectImg.setVisibility(View.VISIBLE);
+                }else {
+                    mDelectImg.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mDelectImg.setOnClickListener(this);
 
     }
     private void initView(){
@@ -49,6 +98,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         mPinBtn = (Button) findViewById(R.id.pin_btn);
         mPhoneEdit = (EditText) findViewById(R.id.phone_edit);
         mPinEdit = (EditText) findViewById(R.id.pin_edit);
+        mBackImg = (ImageView) findViewById(R.id.back_icon);
+        mPhoneText = (EditText) findViewById(R.id.phone_text);
+        mDelectImg = (ImageView) findViewById(R.id.delete_phone);
+        mPasswordEdit = (EditText) findViewById(R.id.register_password);
+        mShowCheckBox = (CheckBox) findViewById(R.id.password_checkbox);
     }
 
     @Override
@@ -88,6 +142,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         }
                     });
                 }
+                break;
+            case R.id.back_icon:
+                finish();
+                break;
+            case R.id.delete_phone:
+                mPhoneText.setText("");
                 break;
         }
 

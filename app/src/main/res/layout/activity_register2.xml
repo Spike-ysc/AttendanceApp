@@ -61,10 +61,13 @@
                     android:layout_alignParentTop="true"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
-                    android:hint="@string/code_mssage"
+                    android:hint="@string/code_message"
                     android:textColorHint="@color/inputBg"
                     android:textColor="@color/black"
-                    app:theme="@style/MyEditText"
+                    app:theme="@style/MyEditText2"
+                    android:inputType="number"
+                    android:digits="1234567890"
+                    android:maxLength="6"
                     android:layout_height="wrap_content"/>
                 <ImageView
                     android:layout_marginRight="8dp"

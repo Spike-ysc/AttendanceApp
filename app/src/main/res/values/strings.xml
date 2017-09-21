@@ -5,10 +5,11 @@
     <string name="phone_number"><font size="16">请输入手机号</font></string>
     <string name="password"><font size="16">请输入密码</font></string>
     <string name="login_toolbar">手机号登录</string>
+    <string name="register_toolbar">手机号注册</string>
     <string name="next_page">下一步</string>
     <string name="register_phone"><font size="16">请输入手机号</font></string>
     <string name="register_pwd"><font size="16">设置登录密码，不少于6位</font></string>
     <string name="phone_code">手机号验证</string>
     <string name="phone_code_message">你会收到一条带验证码的短信，请输入验证码：</string>
-    <string name="code_mssage"><font size="16">请输入验证码</font> </string>
+    <string name="code_message"><font size="16">请输入验证码</font> </string>
 </resources>

@@ -24,7 +24,7 @@
             android:textSize="18sp"
             android:textColor="@color/white"
             android:layout_marginLeft="32dp"
-            android:text="@string/login_toolbar"/>
+            android:text="@string/register_toolbar"/>
     </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_marginTop="56dp"
@@ -96,17 +96,22 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="8dp"/>
                 <EditText
+                    android:id="@+id/phone_text"
                     android:paddingLeft="40dp"
                     android:paddingBottom="16dp"
+                    android:inputType="phone"
+                    android:digits="1234567890"
+                    android:maxLength="11"
                     android:layout_alignParentTop="true"
                     android:textSize="18sp"
                     android:layout_width="match_parent"
                     android:hint="@string/register_phone"
                     android:textColorHint="@color/inputBg"
                     android:textColor="@color/black"
-                    app:theme="@style/MyEditText"
+                    app:theme="@style/MyEditText2"
                     android:layout_height="wrap_content"/>
                 <ImageView
+                    android:id="@+id/delete_phone"
                     android:visibility="invisible"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
@@ -126,14 +131,15 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="8dp"/>
                 <EditText
-                    android:id="@+id/login_password"
+                    android:id="@+id/register_password"
                     android:textSize="18sp"
                     android:inputType="textPassword"
+                    android:maxLength="18"
                     android:hint="@string/register_pwd"
                     android:textColorHint="@color/inputBg"
                     android:paddingBottom="12dp"
                     android:paddingLeft="40dp"
-                    app:theme="@style/MyEditText"
+                    app:theme="@style/MyEditText2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <CheckBox
