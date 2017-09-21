@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/top_bar"
+
+    tools:context="com.example.yan.attendanceapp.LoginUpActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/question_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/loginButton"
+        >
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="32dp"
+            android:text="@string/login_toolbar"/>
+    </android.support.v7.widget.Toolbar>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="56dp"
+       android:background="@color/allBackground"
+       >
+       <!--android:background="@color/allBackground"-->
+
+
+       <!--<android.support.v7.widget.CardView-->
+           <!--android:layout_marginTop="45dp"-->
+           <!--android:layout_width="match_parent"-->
+           <!--android:layout_height="wrap_content"-->
+           <!--android:background="@color/white"-->
+           <!--app:cardCornerRadius="3dp"-->
+           <!--app:cardElevation="4dp"-->
+           <!--&gt;-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+                <ImageView
+                    android:src="@drawable/ic_phone_android_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"/>
+                <EditText
+                    android:paddingLeft="40dp"
+                    android:paddingBottom="16dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="18sp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/phone_number"
+                    android:textColorHint="@color/inputBg"
+                    android:textColor="@color/black"
+                    app:theme="@style/MyEditText"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:visibility="invisible"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_close_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <ImageView
+                android:src="@drawable/ic_lock_outline_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"/>
+            <EditText
+                android:id="@+id/login_password"
+                android:textSize="18sp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:textColorHint="@color/inputBg"
+                android:paddingBottom="12dp"
+                android:paddingLeft="40dp"
+                app:theme="@style/MyEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:layout_marginRight="8dp"
+                android:id="@+id/password_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/select_password"
+                android:button="@null"/>
+        </RelativeLayout>
+            <Button
+                android:layout_marginTop="56dp"
+                android:textColor="@color/white"
+                android:background="@drawable/circular_button"
+                android:text="@string/login_up"
+                android:textSize="18sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:text="忘记密码?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+       <!--</android.support.v7.widget.CardView>-->
+
+   </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
