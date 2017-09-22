@@ -5,11 +5,9 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -18,13 +16,16 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import static b.focused.w;
 
 public class LoginUpActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText mPhoneEdit, passwordEdit;
     private CheckBox passwordCheckbox;
-    private ImageView mBackImg, mdeleteImg;
+    private ImageView mBackImg, mDeleteImg;
     private Button mLoginUpBtn;
+    private TextView mForgetPwdText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +43,9 @@ public class LoginUpActivity extends AppCompatActivity implements View.OnClickLi
             //文字改变时触发的事件
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() != 0){
-                    mdeleteImg.setVisibility(View.VISIBLE);
+                    mDeleteImg.setVisibility(View.VISIBLE);
                 }else {
-                    mdeleteImg.setVisibility(View.INVISIBLE);
+                    mDeleteImg.setVisibility(View.INVISIBLE);
                 }
             }
             @Override
@@ -70,9 +71,11 @@ public class LoginUpActivity extends AppCompatActivity implements View.OnClickLi
 //        登录功能
         mLoginUpBtn.setOnClickListener(this);
         //清除按钮功能
-        mdeleteImg.setOnClickListener(this);
+        mDeleteImg.setOnClickListener(this);
         //返回上一个页面功能
         mBackImg.setOnClickListener(this);
+//        忘记密码，找回功能
+        mForgetPwdText.setOnClickListener(this);
     }
 
     @Override
@@ -84,8 +87,10 @@ public class LoginUpActivity extends AppCompatActivity implements View.OnClickLi
                 //跳转
                 Intent intent = new Intent(LoginUpActivity.this, MainActivity.class);
                 startActivity(intent);
-
-
+                break;
+            case R.id.forget_password:
+                Intent intent1 = new Intent(LoginUpActivity.this, ForgetPasswordActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.delete_phone:
                 mPhoneEdit.setText("");
@@ -103,8 +108,9 @@ public class LoginUpActivity extends AppCompatActivity implements View.OnClickLi
         passwordEdit = (EditText) findViewById(R.id.login_password);
         passwordCheckbox = (CheckBox) findViewById(R.id.password_checkbox);
         mBackImg = (ImageView) findViewById(R.id.back_icon);
-        mdeleteImg = (ImageView) findViewById(R.id.delete_phone);
+        mDeleteImg = (ImageView) findViewById(R.id.delete_phone);
         mLoginUpBtn = (Button) findViewById(R.id.login_up_button);
+        mForgetPwdText = (TextView) findViewById(R.id.forget_password);
 
 //        功能：更改系统状态栏的颜色
 //        来源：http://blog.csdn.net/zbh_1042354552/article/details/53215316

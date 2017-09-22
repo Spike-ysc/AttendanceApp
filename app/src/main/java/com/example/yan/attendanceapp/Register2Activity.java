@@ -78,7 +78,7 @@ public class Register2Activity extends AppCompatActivity {
 //                            }
 //                        }
 //                    });
-                    Intent intent = new Intent(Register2Activity.this, MainActivity.class);
+                    Intent intent = new Intent(Register2Activity.this, Register3Activity.class);
                     startActivity(intent);
                 }
             }

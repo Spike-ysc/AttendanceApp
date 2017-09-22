@@ -12,4 +12,11 @@
     <string name="phone_code">手机号验证</string>
     <string name="phone_code_message">你会收到一条带验证码的短信，请输入验证码：</string>
     <string name="code_message"><font size="16">请输入验证码</font> </string>
+    <string name="realName">请输入真实姓名</string>
+    <string name="studentNum">请输入学号</string>
+    <string name="userName">请输入昵称</string>
+    <string name="register3_toolbar">设置身份信息</string>
+    <string name="register_over">完 成</string>
+    <string name="password_get">密码找回</string>
+    <string name="password_get_button">找回密码</string>
 </resources>

@@ -95,8 +95,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 //    初始化
     private void initView(){
-        mSendBtn = (Button) findViewById(R.id.send_btn);
-        mPinBtn = (Button) findViewById(R.id.pin_btn);
         mPhoneEdit = (EditText) findViewById(R.id.phone_edit);
         mPinEdit = (EditText) findViewById(R.id.pin_edit);
         mBackImg = (ImageView) findViewById(R.id.back_icon);

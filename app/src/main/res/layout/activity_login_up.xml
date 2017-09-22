@@ -140,6 +140,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal">
                 <TextView
+                    android:padding="8dp"
+                    android:id="@+id/forget_password"
                     android:layout_marginTop="16dp"
                     android:text="忘记密码?"
                     android:textColor="@color/red"
