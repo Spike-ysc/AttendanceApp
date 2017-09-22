@@ -41,6 +41,15 @@
         </activity>
         <activity android:name=".ForgetPasswordActivity">
         </activity>
+
+        <receiver
+            android:name=".ForceOfflineReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.yan.attendanceapp.FORCE_OFFLINE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

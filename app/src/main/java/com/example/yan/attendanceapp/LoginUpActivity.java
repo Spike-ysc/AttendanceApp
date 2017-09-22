@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import static b.focused.w;
 
-public class LoginUpActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginUpActivity extends BaseActivity implements View.OnClickListener{
     private EditText mPhoneEdit, passwordEdit;
     private CheckBox passwordCheckbox;
     private ImageView mBackImg, mDeleteImg;
@@ -85,8 +85,10 @@ public class LoginUpActivity extends AppCompatActivity implements View.OnClickLi
                 //判断功能
 
                 //跳转
-                Intent intent = new Intent(LoginUpActivity.this, MainActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent("com.example.yan.attendanceapp.FORCE_OFFLINE");
+                sendBroadcast(intent);
+//                Intent intent = new Intent(LoginUpActivity.this, MainActivity.class);
+//                startActivity(intent);
                 break;
             case R.id.forget_password:
                 Intent intent1 = new Intent(LoginUpActivity.this, ForgetPasswordActivity.class);

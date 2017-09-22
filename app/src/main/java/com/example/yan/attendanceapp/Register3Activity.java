@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-public class Register3Activity extends AppCompatActivity {
+public class Register3Activity extends BaseActivity {
     private Button mOverBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,10 @@ public class Register3Activity extends AppCompatActivity {
         mOverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Register3Activity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Register3Activity.this, MainActivity.class);
+//                startActivity(intent);
+                Intent intent = new Intent("com.example.yan.attendanceapp.FORCE_OFFLINE");
+                sendBroadcast(intent);
             }
         });
     }

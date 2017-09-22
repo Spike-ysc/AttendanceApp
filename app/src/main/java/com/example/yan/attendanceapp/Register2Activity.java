@@ -20,7 +20,7 @@ import cn.bmob.sms.listener.VerifySMSCodeListener;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
-public class Register2Activity extends AppCompatActivity {
+public class Register2Activity extends BaseActivity {
     private ImageView mBackImg;
     private Button mNext, mAgain;
     private EditText mPinEdit;

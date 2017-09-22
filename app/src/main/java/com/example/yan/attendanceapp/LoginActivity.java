@@ -17,7 +17,7 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import cn.bmob.sms.BmobSMS;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private Button loginUpButton;
     private Button registerButton;
     @Override

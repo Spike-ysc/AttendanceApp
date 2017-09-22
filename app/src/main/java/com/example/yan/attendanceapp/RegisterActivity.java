@@ -39,7 +39,7 @@ import cn.bmob.sms.listener.VerifySMSCodeListener;
 import static android.R.attr.y;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends BaseActivity implements View.OnClickListener {
     private Button mSendBtn, mPinBtn, mSendAndNext;
     private EditText mPhoneEdit, mPinEdit, mPhoneText, mPasswordEdit;
     private static final int REQUEST_CODE =  1000;
