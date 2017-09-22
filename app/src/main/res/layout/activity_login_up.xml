@@ -124,6 +124,7 @@
                 android:button="@null"/>
         </RelativeLayout>
             <Button
+                android:id="@+id/login_up_button"
                 android:layout_marginTop="56dp"
                 android:textColor="@color/white"
                 android:background="@drawable/circular_button"

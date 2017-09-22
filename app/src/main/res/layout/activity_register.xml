@@ -153,6 +153,7 @@
                     android:button="@null"/>
             </RelativeLayout>
             <Button
+                android:id="@+id/send_and_next"
                 android:layout_marginTop="32dp"
                 android:textColor="@color/white"
                 android:background="@drawable/circular_button2"
