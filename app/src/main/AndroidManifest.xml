@@ -50,6 +50,7 @@
                 <action android:name="com.example.yan.attendanceapp.FORCE_OFFLINE"/>
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>
