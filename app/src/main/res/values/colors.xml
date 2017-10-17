@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#2196F3</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="dividerColor">#f0f4f5</color>
+    <color name="expandableBackground">#e1f5fe</color>
 
     <color name="loginButton">#3598db</color>
     <color name="registerButton">#e84c3d</color>
@@ -10,6 +17,9 @@
     <color name="userPwdBg">#aaaaaa</color>
     <color name="allBackground">#EFF3F2</color>
     <color name="inputBg">#CCCFCE</color>
+
+    <color name="search_bg_color">#F3F3F3</color>
+    <color name="search_color">#A6A6A6</color>
 
     <!--常规颜色-->
     <color name="red">#F44336</color>

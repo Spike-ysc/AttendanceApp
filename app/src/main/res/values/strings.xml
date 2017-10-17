@@ -19,4 +19,7 @@
     <string name="register_over">完 成</string>
     <string name="password_get">密码找回</string>
     <string name="password_get_button">找回密码</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

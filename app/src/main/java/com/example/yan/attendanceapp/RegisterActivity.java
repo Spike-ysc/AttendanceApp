@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -168,6 +169,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
         if (phone.length() != 11 || !phone.matches(telRegex)){
             toast("请输入11位有效手机号码");
+//            snack("请输入11位有效手机号码");
+//            输入时键盘会挡住信息的显示
         }
         else if (password.length()<6){
             toast("密码格式不正确");
@@ -203,7 +206,11 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     }
 
-
+    private void snack(String msg){
+        Snackbar.make(getCurrentFocus(), msg, Snackbar.LENGTH_SHORT)
+                .setAction("",null)
+                .show();
+    }
 
     private void toast(String msg){
         Toast.makeText(this,msg, Toast.LENGTH_SHORT).show();
